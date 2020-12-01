@@ -7,4 +7,5 @@ public func configure(_ app: Application) throws {
 
     // register routes
     try routes(app)
+    app.http.server.configuration.address = BindAddress.hostname("0.0.0.0", port: 8080)
 }

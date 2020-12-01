@@ -9,7 +9,11 @@ func routes(_ app: Application) throws {
         return "Hello, world!"
     }
 
-    app.get("health") { req -> String in
+    app.get("status", "health") { req -> String in
         return ""
+//        Response(status: .ok,
+//                        version: kCFHTTPVersion1_0,
+//                        headers: HTTPHeaders([("Content-Type", "application.json")]),
+//                        body: Response.Body.empty)
     }
 }
